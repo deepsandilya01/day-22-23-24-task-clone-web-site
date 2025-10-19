@@ -1,24 +1,24 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
+@font-face {
+  font-family: ser;
+  src: url(./63cffc20aa8997095067596f_Satoshi-Light.woff);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ser;
+}
 html,
 body {
   height: 100%;
   width: 100%;
 }
 
-html {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: rgb(244, 244, 244);
-  font-size: clamp(14px, 1vw, 18px);
-}
-
 body {
-  background-color: #1d1d1d;
+  background-color: #121212;
+  color: rgb(216, 216, 216);
+  font-size: clamp(14px, 1vw, 18px);
 }
 
 @mixin flex-column($gap: 0rem) {
@@ -26,11 +26,9 @@ body {
   flex-direction: column;
   gap: $gap;
 }
-
 section {
   max-width: 2000px;
 }
-
 main {
   width: 100%;
   @include flex-column(0rem);
@@ -51,7 +49,7 @@ main {
     }
 
     .bottom {
-      background-color: #292929;
+      background-color: #1e1e1e;
       border-radius: 0.7rem;
       padding: 1.5rem;
       @include flex-column(3rem);
@@ -60,70 +58,63 @@ main {
         @include flex-column(0.7rem);
 
         h1 {
-          font-weight: 200;
-          font-size: 2.5rem;
+          font-weight: 400;
+          font-size: 2.9rem;
           text-transform: uppercase;
         }
-
         p {
           font-weight: 100;
-          font-size: 1.5rem;
-          opacity: 0.6;
+          opacity: 0.8;
+          font-size: 1rem;
           line-height: 1.5;
         }
-
         button {
           width: fit-content;
-          background-color: #292929;
-          color: aliceblue;
-          outline: none;
+          border: none;
           padding: 0.7rem 1rem;
           border-radius: 0.5rem;
-          cursor: pointer;
         }
       }
     }
   }
-
   section.view2 {
-    @include flex-column(1rem);
+    @include flex-column(2.5rem);
     width: 100%;
     padding: 1rem;
-
     .top,
     .bottom {
       display: flex;
       width: 100%;
       justify-content: space-around;
-    }
-
-    .element {
-      text-align: center;
-      @include flex-column(0.2rem);
-
-      h2 {
-        font-size: 3rem;
-        font-weight: 400;
+      .element {
+        text-align: center;
+        @include flex-column(0.2rem);
+        small {
+          opacity: 0.6;
+        }
+        h2 {
+          font-size: 3rem;
+          font-weight: 300;
+        }
       }
     }
   }
-
   section.view3 {
+    @include flex-column(1rem);
     width: 100%;
     padding: 1rem;
-    @include flex-column(1rem);
-
     .top {
       width: 100%;
-
       img {
         width: 100%;
         border-radius: 0.7rem;
       }
     }
-
+    .bottom > p {
+      text-transform: uppercase;
+    }
     .bottom {
-      background-color: #292929;
+      background-color: #1e1e1e;
       border-radius: 0.7rem;
       padding: 1.5rem;
       @include flex-column(3rem);
@@ -132,41 +123,41 @@ main {
         @include flex-column(0.7rem);
 
         h1 {
-          font-weight: 200;
-          font-size: 2.5rem;
+          font-weight: 400;
+          font-size: 2.9rem;
           text-transform: uppercase;
         }
-
         p {
           font-weight: 100;
-          font-size: 1.5rem;
-          opacity: 0.6;
+          opacity: 0.8;
+          font-size: 1rem;
           line-height: 1.5;
         }
+        button {
+          width: fit-content;
+          border: none;
+          padding: 0.7rem 1rem;
+          border-radius: 0.5rem;
+        }
       }
-    }
-
-    .bottom > p {
-      text-transform: uppercase;
     }
   }
-
   section.view4 {
+    @include flex-column(1rem);
     width: 100%;
     padding: 1rem;
-    @include flex-column(1rem);
-
     .top {
       width: 100%;
-
       img {
         width: 100%;
         border-radius: 0.7rem;
       }
     }
-
+    .bottom > p {
+      text-transform: uppercase;
+    }
     .bottom {
-      background-color: #292929;
+      background-color: #1e1e1e;
       border-radius: 0.7rem;
       padding: 1.5rem;
       @include flex-column(3rem);
@@ -175,22 +166,135 @@ main {
         @include flex-column(0.7rem);
 
         h1 {
-          font-weight: 200;
-          font-size: 2.5rem;
+          font-weight: 400;
+          font-size: 2.6rem;
           text-transform: uppercase;
         }
-
         p {
           font-weight: 100;
-          font-size: 1.5rem;
-          opacity: 0.6;
+          opacity: 0.8;
+          font-size: 1rem;
           line-height: 1.5;
+        }
+        button {
+          width: fit-content;
+          border: none;
+          padding: 0.7rem 1rem;
+          border-radius: 0.5rem;
         }
       }
     }
+  }
+  section.view5 {
+    @include flex-column(1rem);
+    width: 100%;
+    padding: 0.5rem 1.7rem;
+  }
+  section.view6 {
+    @include flex-column(2rem);
+    width: 100%;
+    padding: 1rem;
+    .card {
+      border-radius: 0.7rem;
+      width: 100%;
+      background-image: url(./img4.webp);
+      background-size: cover;
+      aspect-ratio: 1/1;
 
-    .bottom > p {
-      text-transform: uppercase;
+      @include flex-column(0rem);
+      justify-content: space-between;
+      padding: 1rem;
+      .icon,
+      .bottom {
+        background-color: rgba(133, 132, 132, 0.284);
+        backdrop-filter: blur(3px);
+        border: 1px solid white;
+        border-radius: 0.7rem;
+        padding: 0.5rem;
+      }
+      .top {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+      }
+      .icon {
+        width: fit-content;
+        border-radius: 50%;
+      }
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.4rem 1rem;
+        p {
+          text-transform: uppercase;
+        }
+      }
+    }
+    .card:nth-child(2) {
+      background-image: url(./img5.webp);
+    }
+    .card:nth-child(3) {
+      background-image: url(./img6.webp);
+    }
+  }
+  section.view7 {
+    @include flex-column(1rem);
+    width: 100%;
+    padding: 1rem;
+    .top {
+      width: 100%;
+      img {
+        width: 100%;
+        border-radius: 0.7rem;
+      }
+    }
+    .bottom {
+      border-radius: 0.7rem;
+      background-color: #1e1e1e;
+      width: 100%;
+      .element {
+        @include flex-column(0.3rem);
+        padding: 2rem;
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      .button {
+        display: flex;
+        padding: 2rem;
+      }
+      .button button {
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        border: none;
+      }
+    }
+  }
+  section.view8 {
+    width: 100%;
+    padding: 1rem;
+    .text {
+      color: black;
+      background-color: #cebd63;
+      border-radius: 0.7rem;
+      padding: 2rem;
+      width: 100%;
+      p {
+        font-size: 1.2rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .button {
+      padding: 1.4rem;
+    }
+    .button button {
+      padding: 1rem;
+      background-color: black;
+      color: white;
+      border-radius: 0.8rem;
+      width: 100%;
     }
   }
 }
@@ -205,21 +309,18 @@ main {
       .bottom {
         width: 50%;
       }
-
       .bottom {
         justify-content: space-between;
         padding: 3rem;
 
         .text {
-          gap: 1.5rem;
-
+          gap: 1rem;
           h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
           }
-
           p {
-            width: 60%;
-            font-size: 1rem;
+            width: 90%;
+            font-size: 1.2rem;
           }
         }
       }
@@ -236,18 +337,11 @@ main {
       .bottom {
         width: 50%;
       }
-
       .bottom {
         justify-content: space-between;
-        padding: 3rem;
-
         .paragraphs {
           display: flex;
           gap: 2rem;
-
-          p {
-            font-size: 1rem;
-          }
         }
       }
     }
@@ -259,19 +353,57 @@ main {
       .bottom {
         width: 50%;
       }
-
       .bottom {
         justify-content: space-between;
-        padding: 3rem;
-
         .paragraphs {
           display: flex;
           gap: 2rem;
-
-          p {
-            font-size: 1rem;
+        }
+      }
+    }
+    section.view5 {
+      flex-direction: row;
+      padding: 1rem 5rem;
+    }
+    section.view6 {
+      flex-direction: row;
+      padding: 1rem 4rem;
+    }
+    section.view7 {
+      flex-direction: row;
+      padding: 1rem 4rem;
+      .top,
+      .bottom {
+        width: 50%;
+      }
+      .bottom {
+        @include flex-column(2rem);
+        justify-content: space-between;
+        .element {
+          h1 {
+            font-size: 3rem;
           }
         }
+      }
+    }
+    section.view8 {
+      position: relative;
+      width: 93%;
+      .text {
+        padding: 1rem 4rem;
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .button button {
+        width: fit-content;
       }
     }
   }
